@@ -90,14 +90,14 @@ export function MeWindow({ meClick, isHidden }) {
 							src={images.me3}
 							alt=""
 						/>
-						{/* <Image
+						<Image
 							alt=""
 							onClick={() => setfourthPic((prev) => !prev)}
 							className="rounded-md border  border-separate shadow-2xl shadow-indigo-200 border-black  cursor-pointer hover:scale-105 duration-200"
 							height={250}
 							width={250}
 							src={images.me4}
-						/> */}
+						/>
 						<Image
 							alt=""
 							onClick={() => setFirstPic((prev) => !prev)}
