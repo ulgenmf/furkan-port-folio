@@ -6,7 +6,7 @@ import css from "../assets/css.png";
 import me1 from "../assets/me/me1.jpeg";
 import me2 from "../assets/me/me2.jpeg";
 import me3 from "../assets/me/me3.jpeg";
-import me4 from "../assets/me/a.png";
+import me4 from "../assets/me/me4.png";
 import figma from "../assets/figma.png";
 import flutter from "../assets/flutter.png";
 import git from "../assets/git.png";
