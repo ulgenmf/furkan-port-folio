@@ -1,6 +1,6 @@
 import "./globals.css";
 import { useEffect } from "react";
-
+import profileImage from "../public/profile.442ef300.PNG";
 import "../pages/splash/Splash.scss";
 import "../components/DefaultWindow/DeafultWindow.scss";
 import React, { createContext, useState } from "react";
