@@ -272,7 +272,7 @@ export function WorksWindow({ worksClick }) {
 					</div>
 				</div>
 				<p className="absolute text-center  text-lime-600 left-5 text-lg top-10">
-					The links has been temporarily disabled due to some complications, I would
+					The links have been temporarily disabled due to some complications, I would
 					still be okay to show it if spesificly asked
 					<span className="">
 						{" "}
