@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState, useContext } from "react";
 import React from "react";
-
+import Dos from "@/components/DOS/Dos";
 import ContactForm from "@/components/ContactForm/ContactForm";
 
 import Splash from "./splash/";
@@ -22,7 +22,9 @@ export default function Home() {
 				/>
 			</Head>
 
-			<Splash />
+			{/* <Splash /> */}
+
+			<Dos />
 		</>
 	);
 }

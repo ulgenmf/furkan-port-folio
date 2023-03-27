@@ -10,6 +10,7 @@ import { BiMailSend } from "react-icons/bi";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import ContactForm from "@/components/ContactForm/ContactForm";
 import { useHistory } from "react-router-dom";
+import Dos from "@/components/DOS/Dos";
 
 import { ToastContainer, toast } from "react-toastify";
 
@@ -17,6 +18,8 @@ import "react-toastify/dist/ReactToastify.css";
 import {
 	SkillsWindow,
 	WorksWindow,
+	GameWindow,
+	DosWindow,
 } from "../../components/DefaultWindow/DefaultWindow";
 import Link from "next/link";
 import { MeWindow } from "../../components/DefaultWindow/DefaultWindow";
@@ -59,6 +62,7 @@ function Index() {
 
 	const [skillsFolder, setSkillsFolder] = useState(true);
 	const [worksFolder, setWorksFolder] = useState(true);
+	const [gamesFolder, setGamesFolder] = useState(true);
 	const [meFolder, setMeFolder] = useState(true);
 	const itemVariants = {
 		open: {
@@ -268,7 +272,6 @@ function Index() {
 					</motion.nav>{" "}
 				</motion.nav>
 			</div>
-
 			<div
 				className={` bg-cover  bg-center duration-200 desktop flex flex-shrink-0 layout`}
 				style={{
@@ -298,10 +301,15 @@ function Index() {
 						</p>
 					</div>
 				</Draggable>
-
-				<Draggable bounds=".desktop" handle=".here1">
-					<div className=" h-fit  z-40 absolute right-[40%]">
-						<ContactForm />
+				<Draggable bounds=".desktop">
+					<div
+						onDoubleClick={() => setGamesFolder(false)}
+						className=" h-28  mt-2 active:scale-110  cursor-pointer  hover:scale-125 items-center flex flex-col hover:bg-blue-400 active:bg-blue-600 hover:bg-opacity-20 bg-opacity-[0.01] rounded-lg  "
+					>
+						<FcFolder size={120} />
+						<p className="text-white  text-center font-semibold text-md bg-opacity-10 ">
+							Games
+						</p>
 					</div>
 				</Draggable>
 
@@ -316,6 +324,48 @@ function Index() {
 						</p>
 					</div>
 				</Draggable>
+				<Draggable bounds=".desktop">
+					<div
+						onDoubleClick={() => setGamesFolder(false)}
+						className=" h-28  mt-2 active:scale-110   cursor-pointer  center  bg-cover bg-center  hover:scale-125 items-center flex flex-col hover:bg-blue-400 active:bg-blue-600 hover:bg-opacity-20 bg-opacity-[0.01] rounded-lg  "
+					>
+						{" "}
+						<Image src={images.doom} alt="Picture of the author" width={100} />
+						<p className="text-white  text-center font-semibold text-md bg-opacity-10 ">
+							Doom
+						</p>
+					</div>
+				</Draggable>
+				<Draggable bounds=".desktop">
+					<div
+						onDoubleClick={() => setGamesFolder(false)}
+						className=" h-28  mt-2 active:scale-110   cursor-pointer  center  bg-cover bg-center  hover:scale-125 items-center flex flex-col hover:bg-blue-400 active:bg-blue-600 hover:bg-opacity-20 bg-opacity-[0.01] rounded-lg  "
+					>
+						{" "}
+						<Image src={images.wolf} alt="Picture of the author" width={100} />
+						<p className="text-white  text-center font-semibold text-md bg-opacity-10 ">
+							Wolfenstein
+						</p>
+					</div>
+				</Draggable>
+				<Draggable bounds=".desktop">
+					<div
+						onDoubleClick={() => setGamesFolder(false)}
+						className=" h-28  mt-2 active:scale-110   cursor-pointer  center  bg-cover bg-center  hover:scale-125 items-center flex flex-col hover:bg-blue-400 active:bg-blue-600 hover:bg-opacity-20 bg-opacity-[0.01] rounded-lg  "
+					>
+						{" "}
+						<Image src={images.prince} alt="Picture of the author" width={100} />
+						<p className="text-white  text-center font-semibold text-md bg-opacity-10 ">
+							Prince of Persia
+						</p>
+					</div>
+				</Draggable>
+				<Draggable bounds=".desktop" handle=".here1">
+					<div className=" h-fit  z-40 absolute right-[40%]">
+						<ContactForm />
+					</div>
+				</Draggable>
+
 				<div hidden={skillsFolder}>
 					<SkillsWindow skillClick={() => setSkillsFolder(true)} />{" "}
 				</div>
@@ -325,6 +375,7 @@ function Index() {
 				<div className="z-50" hidden={worksFolder}>
 					<WorksWindow worksClick={() => setWorksFolder(true)} />
 				</div>
+				{/* <DosWindow /> */}
 			</div>
 		</div>
 	);

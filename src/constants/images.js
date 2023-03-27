@@ -7,6 +7,9 @@ import me1 from "../assets/me/me1.jpeg";
 import me2 from "../assets/me/me2.jpeg";
 import me3 from "../assets/me/me3.jpeg";
 import me4 from "../assets/me/a.jpg";
+import doom from "../assets/gameIcon/doom.png";
+import prince from "../assets/gameIcon/prince.png";
+import wolf from "../assets/gameIcon/wolf.png";
 import figma from "../assets/figma.png";
 import flutter from "../assets/flutter.png";
 import git from "../assets/git.png";
@@ -70,6 +73,7 @@ import wp3 from "src/assets/wallpaper/Sky-at-night.jpg";
 import wp4 from "src/assets/wallpaper/solar-eclipse.jpg";
 
 export default {
+	doom,
 	wp,
 	wp1,
 	wp2,
@@ -94,6 +98,8 @@ export default {
 	tailwind,
 	me1,
 	me2,
+	prince,
+	wolf,
 	me3,
 	me4,
 	trash,

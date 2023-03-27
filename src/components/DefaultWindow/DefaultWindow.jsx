@@ -16,6 +16,7 @@ import { MdMinimize } from "react-icons/md";
 import images from "../../constants/images";
 import { stringify } from "postcss";
 import { AiFillGithub } from "react-icons/ai";
+import Dos from "../DOS/Dos";
 
 export function SkillsWindow({ skillClick }) {
 	const [hide, setHide] = useState("");
@@ -27,7 +28,7 @@ export function SkillsWindow({ skillClick }) {
 					<div
 						className={`__title.bar   w-full handle cursor-move flex bg-gray-600 justify-between  h-10 rounded-t-2xl `}
 					>
-						<p className="text-white  self-center text-lg font-mono ml-2">SKills</p>
+						<p className="text-white  self-center text-lg font-mono ml-2">Skills</p>
 						<div className="flex justify-center hover:scale-105  active:bg-lime-400  bg-red-300 rounded-md ">
 							<AiOutlineClose
 								onClick={skillClick}
@@ -306,6 +307,65 @@ export function WorksWindow({ worksClick }) {
 					))}
 				</div>
 			</div>
+		</Draggable>
+	);
+}
+
+export function GameWindow({ gamesClick }) {
+	return (
+		<>
+			<div>
+				<Draggable bounds=".desktop" handle={".handle"}>
+					<div className={` items-center  justify-center  flex flex-col`}>
+						<div
+							className={`__title.bar   w-full handle cursor-move flex bg-gray-600 justify-between  h-10 rounded-t-2xl `}
+						>
+							<p className="text-white  self-center text-lg font-mono ml-2">Games</p>
+							<div className="flex justify-center hover:scale-105  active:bg-lime-400  bg-red-300 rounded-md ">
+								<AiOutlineClose
+									onClick={gamesClick}
+									size={30}
+									className="self-center cursor-pointer"
+								/>
+							</div>
+						</div>
+
+						<div className="grid  grid-cols-3 grid-rows-3  rounded-b-lg gap-5 bg-gray-200 p-5  w-[500px] h-fit ">
+							{/* {skillsArray.map((item) => (
+								<div className="flex items-center hover:scale-105 duration-200 text-[1rem] font-sans  gap-1 flex-col">
+									<Image height={50} src={item.image} alt="" />
+									<p>{item.name}</p>
+								</div>
+							))} */}
+						</div>
+					</div>
+				</Draggable>
+			</div>
+		</>
+	);
+}
+
+export function DosWindow({ dosWindowClick }) {
+	return (
+		<Draggable>
+			<Draggable bounds=".desktop" handle={".handle"}>
+				<div className={` items-center  justify-center  flex flex-col`}>
+					<div
+						className={`__title.bar   w-full handle cursor-move flex bg-gray-600 justify-between  h-10 rounded-t-2xl `}
+					>
+						<p className="text-white  self-center text-lg font-mono ml-2">Games</p>
+						<div className="flex justify-center hover:scale-105  active:bg-lime-400  bg-red-300 rounded-md ">
+							<AiOutlineClose
+								// onClick={gamesClick}
+								size={30}
+								className="self-center cursor-pointer"
+							/>
+						</div>
+					</div>
+
+					<Dos />
+				</div>
+			</Draggable>
 		</Draggable>
 	);
 }
