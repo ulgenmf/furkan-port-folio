@@ -67,7 +67,7 @@ function Splash() {
 				/>
 
 				<div className="  w-full font-V3 text-3xl flex flex-col  relative">
-					<TypeIt className=" tablet:hidden pc:hiddenm">Please wait...</TypeIt>
+					<TypeIt className=" tablet:hidden pc:hidden">Please wait...</TypeIt>
 					<TypeIt options={{ speed: 5, cursor: false }}>
 						{" "}
 						<div className="flex name flex-row mt-2">
@@ -86,7 +86,7 @@ function Splash() {
 							</div>
 							<div className="ml-4">
 								<p>Name:Muhammed Furkan Ulgen</p>
-								<p>Bhirtday: 16.04.1994</p>
+								<p>Birthday: 16.04.1994</p>
 								<p>Place Of Birth: Istanbul/ Turkey</p>
 								<p>Profession: Software Developer</p>
 								<p>Place: Leipzig/ Germany</p>
@@ -95,7 +95,10 @@ function Splash() {
 								Hey, My name is Furkan, I am a junior software developer. I wanted to
 								create a portfolio with my own ideas. However it is a bit more
 								complicated than I expected, you can see what I was able accomplish so
-								far. Excuse me if some of the features might now work as intented.
+								far. Excuse me if some of the features might now work as
+								intended.Responsiveness also off due to libraries and draggable contents
+								being really hard to configure. I will soon fix that problem as well,
+								meanwhile please don't try the responsiveness
 							</p>
 						</div>
 					</TypeIt>

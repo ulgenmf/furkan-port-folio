@@ -281,9 +281,9 @@ export function WorksWindow({ worksClick }) {
 				</p>
 				<div className="  p-2 gap-5  grid place-items-center grid-rows-2   grid-flow-col w-[1000px] bg-gray-200   ">
 					{workFolder.map((item) => (
-						<div className="border-2 gap-3 shadow-2xl  border-1 border-rose-200 relative hover:scale-125  duration-300  shadow-blue-400">
+						<div className="border-2 gap-3 shadow-2xl  border-1 border-rose-200 relative hover:scale-105  duration-[0.7s]  shadow-blue-400">
 							<div className="  h-full    hover:visible absolute   min-w-full  ">
-								<div className="flex items-center  flex-col  outline-none gap-5 h-full  duration-200 opacity-0 hover:bg-opacity-70  hover:opacity-100 bg-black  justify-center">
+								<div className="flex items-center  flex-col  outline-none gap-5 h-full  duration-[0.7s]   opacity-0 hover:bg-opacity-70  hover:opacity-100 bg-black  justify-center">
 									<div className="flex ">
 										<AiFillGithub
 											size={30}
