@@ -23,15 +23,7 @@ export default function Document() {
 					href="/node_modules/react-resizable/css/styles.css"
 				/>
 			</Head>
-			<script
-				async
-				src="https://www.googletagmanager.com/gtag/js?id=G-ZLBV3DN4D9"
-			></script>
-			<script>
-				window.dataLayer = window.dataLayer || []; function gtag()
-				{dataLayer.push(arguments)}
-				gtag('js', new Date()); gtag('config', 'G-ZLBV3DN4D9');
-			</script>
+
 			<body>
 				<Main />
 				<NextScript />
