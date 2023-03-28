@@ -22,9 +22,9 @@ export default function Home() {
 				/>
 			</Head>
 
-			{/* <Splash /> */}
+			<Splash /> 
 
-			<Dos />
+			
 		</>
 	);
 }
