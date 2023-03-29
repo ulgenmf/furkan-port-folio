@@ -311,61 +311,35 @@ export function WorksWindow({ worksClick }) {
 	);
 }
 
-export function GameWindow({ gamesClick }) {
+export function DosWindow({ gamesClick, gameLink, gameName }) {
 	return (
-		<>
-			<div>
-				<Draggable bounds=".desktop" handle={".handle"}>
-					<div className={` items-center  justify-center  flex flex-col`}>
-						<div
-							className={`__title.bar   w-full handle cursor-move flex bg-gray-600 justify-between  h-10 rounded-t-2xl `}
-						>
-							<p className="text-white  self-center text-lg font-mono ml-2">Games</p>
-							<div className="flex justify-center hover:scale-105  active:bg-lime-400  bg-red-300 rounded-md ">
-								<AiOutlineClose
-									onClick={gamesClick}
-									size={30}
-									className="self-center cursor-pointer"
-								/>
-							</div>
-						</div>
-
-						<div className="grid  grid-cols-3 grid-rows-3  rounded-b-lg gap-5 bg-gray-200 p-5  w-[500px] h-fit ">
-							{/* {skillsArray.map((item) => (
-								<div className="flex items-center hover:scale-105 duration-200 text-[1rem] font-sans  gap-1 flex-col">
-									<Image height={50} src={item.image} alt="" />
-									<p>{item.name}</p>
-								</div>
-							))} */}
-						</div>
+		<Draggable bounds={".desktop"} handle={".handle"}>
+			<div
+				className={` items-center absolute  justify-center left-[30%] top-[30%]  flex flex-col`}
+			>
+				<div
+					className={`__title.bar   w-full handle cursor-move flex bg-gray-600 justify-between  h-10 rounded-t-2xl `}
+				>
+					<p className="text-white  self-center text-lg font-mono ml-2">
+						{gameName}
+					</p>
+					<div className="flex justify-center hover:scale-105  active:bg-lime-400  bg-red-300 rounded-md ">
+						<AiOutlineClose
+							onClick={gamesClick}
+							size={30}
+							className="self-center cursor-pointer"
+						/>
 					</div>
-				</Draggable>
-			</div>
-		</>
-	);
-}
-
-export function DosWindow({ dosWindowClick }) {
-	return (
-		<Draggable>
-			<Draggable bounds=".desktop" handle={".handle"}>
-				<div className={` items-center  justify-center  flex flex-col`}>
-					<div
-						className={`__title.bar   w-full handle cursor-move flex bg-gray-600 justify-between  h-10 rounded-t-2xl `}
-					>
-						<p className="text-white  self-center text-lg font-mono ml-2">Games</p>
-						<div className="flex justify-center hover:scale-105  active:bg-lime-400  bg-red-300 rounded-md ">
-							<AiOutlineClose
-								// onClick={gamesClick}
-								size={30}
-								className="self-center cursor-pointer"
-							/>
-						</div>
-					</div>
-
-					<Dos />
 				</div>
-			</Draggable>
+
+				<iframe
+					width="800"
+					height="500"
+					frameborder="0"
+					src={gameLink}
+					allowfullscreen
+				></iframe>
+			</div>
 		</Draggable>
 	);
 }

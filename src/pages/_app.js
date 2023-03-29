@@ -29,7 +29,18 @@ export default function App({ Component, pageProps }) {
 				setIsMessageSent,
 			}}
 		>
-			<Component {...pageProps} />;
+			<div
+				id="mobile-warning"
+				className="__mobile pc:hidden text-5xl text-center items-center flex  text-purple-400 h-screen w-screen bg-black font-V3"
+			>
+				<p className="p-2">
+					I see you are on a mobile device, sorry to inform you responsive
+					configuration hasnt been completed yet, please try with bigger screen
+				</p>
+			</div>
+			<div className="tablet:hidden mobile:hidden pc:block">
+				<Component {...pageProps} />
+			</div>
 		</MyContext.Provider>
 	);
 }

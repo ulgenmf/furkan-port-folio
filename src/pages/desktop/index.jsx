@@ -40,6 +40,20 @@ function Index() {
 		}
 	}, []);
 
+	const gameList = [
+		{
+			prince:
+				"https://dos.zone/player/?bundleUrl=https%3A%2F%2Fcdn.dos.zone%2Foriginal%2F2X%2F1%2F1179a7c9e05b1679333ed6db08e7884f6e86c155.jsdos?anonymous=1",
+		},
+		{
+			wolf:
+				"https://dos.zone/player/?bundleUrl=https%3A%2F%2Fcdn.dos.zone%2Foriginal%2F2X%2Fa%2Fac888d1660aa253f0ed53bd6c962c894125aaa19.jsdos?anonymous=1",
+		},
+		{
+			doom:
+				"https://dos.zone/player/?bundleUrl=https%3A%2F%2Fcdn.dos.zone%2Fcustom%2Fdos%2Fdoom.jsdos?anonymous=1",
+		},
+	];
 	const [theme, setTheme] = useState({
 		color: "#105960f8",
 		picture: "https://giffiles.alphacoders.com/212/212369.gif",
@@ -62,8 +76,9 @@ function Index() {
 
 	const [skillsFolder, setSkillsFolder] = useState(true);
 	const [worksFolder, setWorksFolder] = useState(true);
-	const [gamesFolder, setGamesFolder] = useState(true);
 	const [meFolder, setMeFolder] = useState(true);
+	const [gamesFolder, setGamesFolder] = useState([{ state: true, link: "" }]);
+
 	const itemVariants = {
 		open: {
 			opacity: 1,
@@ -301,17 +316,6 @@ function Index() {
 						</p>
 					</div>
 				</Draggable>
-				<Draggable bounds=".desktop">
-					<div
-						onDoubleClick={() => setGamesFolder(false)}
-						className=" h-28  mt-2 active:scale-110  cursor-pointer  hover:scale-125 items-center flex flex-col hover:bg-blue-400 active:bg-blue-600 hover:bg-opacity-20 bg-opacity-[0.01] rounded-lg  "
-					>
-						<FcFolder size={120} />
-						<p className="text-white  text-center font-semibold text-md bg-opacity-10 ">
-							Games
-						</p>
-					</div>
-				</Draggable>
 
 				<Draggable bounds=".desktop">
 					<div
@@ -326,7 +330,16 @@ function Index() {
 				</Draggable>
 				<Draggable bounds=".desktop">
 					<div
-						onDoubleClick={() => setGamesFolder(false)}
+						onDoubleClick={() =>
+							setGamesFolder([
+								{
+									state: false,
+									link:
+										"https://dos.zone/player/?bundleUrl=https%3A%2F%2Fcdn.dos.zone%2Fcustom%2Fdos%2Fdoom.jsdos?anonymous=1",
+									name: "DOOM",
+								},
+							])
+						}
 						className=" h-28  mt-2 active:scale-110   cursor-pointer  center  bg-cover bg-center  hover:scale-125 items-center flex flex-col hover:bg-blue-400 active:bg-blue-600 hover:bg-opacity-20 bg-opacity-[0.01] rounded-lg  "
 					>
 						{" "}
@@ -375,7 +388,12 @@ function Index() {
 				<div className="z-50" hidden={worksFolder}>
 					<WorksWindow worksClick={() => setWorksFolder(true)} />
 				</div>
-				{/* <DosWindow /> */}
+				{/* <div hidden={gamesFolder.state}>
+					{console.log(gamesFolder.state, "9999")}
+					<DosWindow
+						gamesClick={() => setGamesFolder([{ ...gamesFolder, state: true }])}
+					/>
+				</div> */}
 			</div>
 		</div>
 	);

@@ -53,12 +53,6 @@ function Splash() {
 
 	return (
 		<>
-			<div className="mobile-device text-5xl text-center items-center flex  text-purple-400 h-screen w-screen bg-black font-V3">
-				<p className="p-2">
-					I see you are on a mobile device, sorry to inform you responsive
-					configuration hasnt been completed yet, please try with bigger screen
-				</p>
-			</div>
 			<div className="body__body flex  text-white flex-col  bg-black h-screen">
 				<Image
 					className="h-28 w-44 absolute  duration-150 body__img right-[3%] top-[3%]"
