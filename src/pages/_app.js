@@ -34,8 +34,9 @@ export default function App({ Component, pageProps }) {
 				className="__mobile pc:hidden text-5xl text-center items-center flex  text-purple-400 h-screen w-screen bg-black font-V3"
 			>
 				<p className="p-2">
-					I see you are on a mobile device, sorry to inform you responsive
-					configuration hasnt been completed yet, please try with bigger screen
+					I using a smaller screen device. The responsiveness hasnt been working
+					properly due to draggable content and other libraries are conflicting.
+					Please make sure you are using your windows witdh is higher than 1280px
 				</p>
 			</div>
 			<div className="tablet:hidden mobile:hidden pc:block">
