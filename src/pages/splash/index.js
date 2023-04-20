@@ -81,7 +81,7 @@ function Splash() {
 							<div className="ml-4">
 								<p>Name:Muhammed Furkan Ulgen</p>
 								<p>Birthday: 16.04.1994</p>
-								<p>Place Of Birth: Istanbul/ Turkey</p>
+								<p>Place Of Birth: Diyarbakır / bağlar</p>
 								<p>Profession: Software Developer</p>
 								<p>Place: Leipzig/ Germany</p>
 							</div>
